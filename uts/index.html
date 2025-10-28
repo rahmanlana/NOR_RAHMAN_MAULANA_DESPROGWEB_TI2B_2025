@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Pelanggan - Bank Sampah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <h2><span class="logo-black">Bank</span><span class="logo-green">.Sampah</span></h2>
+        </div>
+
+        <h3>Tambah Pelanggan</h3>
+
+        <form id="formPelanggan" action="proses.php" method="POST">
+            <input type="text" id="nama" name="nama" placeholder="Nama Pelanggan" required>
+            <input type="text" id="alamat" name="alamat" placeholder="Alamat" required>
+            <input type="text" id="nohp" name="nohp" placeholder="No HP" required>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <input type="number" id="berat" name="berat" placeholder="Berat Sampah (Kg)" required>
+            <select id="jenis" name="jenis" required>
+                <option value="">Pilih Jenis Sampah</option>
+                <option value="Organik">Organik</option>
+                <option value="Anorganik">Anorganik</option>
+            </select>
+            <button type="submit">Oke</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div id="popupDetail" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="tutupPopupDetail()">&times;</span>
+            <h3>Detail Riwayat</h3>
+            <div id="detailContainer"></div>
+            <button id="hapusBtn" class="hapus-btn">Hapus Riwayat</button>
+        </div>
+    </div>
+    <div class="filter-section">
+        <input type="text" id="search" placeholder="Cari nama pelanggan...">
+    </div>
+
+    <div class="riwayat" id="riwayatList"></div>
+
+    <div id="popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <span class="close" onclick="tutupPopup()">&times;</span>
+            <p id="popupMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+}
+
+.logo-black {
+    color: #000;
+    font-weight: 700;
+}
+
+.logo-green {
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+form input,
+form select {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #43a047;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+/* Pencarian */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-section input {
+    width: 60%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Kartu Riwayat */
+.card {
+    background: #fff;
+    margin: 10px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    background-color: #f1fdf3;
+}
+
+.kanan {
+    text-align: right;
+}
+
+.hijau {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.biru {
+    color: #0073e6;
+    font-weight: 600;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    animation: muncul 0.3s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+}
+
+.hapus-btn {
+    margin-top: 15px;
+    background-color: #e53935;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hapus-btn:hover {
+    background-color: #c62828;
+}
+
+#detailContainer p {
+    text-align: left;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}

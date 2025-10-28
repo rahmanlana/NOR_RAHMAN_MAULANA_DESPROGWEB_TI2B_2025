@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Sampah</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.js"></script>
+</head>
+
+<body style="font-family: sans-serif;">
+    <div class="menu">
+        <nav class="navbar">
+            <div class="logo">Bank.<span>Sampah</span></div>
+            <ul class="nav-links">
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="tambah-link">Tambah Pelanggan</a></li>
+                <li><a href="#" id="riwayat-link">Riwayat</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+        <div class="content" id="content">
+            <h1>Selamat Datang di Bank Sampah</h1>
+            <p>Pilih menu di atas untuk mulai mengelola data pelanggan atau melihat riwayat transaksi.</p>
+        </div>
+    </div>
+    <div class="background-hijau"></div>
+    <section class="tambah-pelanggan">
+        <h2>Tambah Pelanggan</h2>
+        <form id="formPelanggan" action="#" class="form-container">
+            <input type="text" id="nama" name="nama" placeholder="Nama Pelanggan" required>
+            <input type="text" id="alamat" name="alamat" placeholder="Alamat" required>
+            <input type="text" id="no_hp" name="no_hp" placeholder="No Hp" required>
+            <input type="number" id="berat" name="berat_sampah" placeholder="Berat Sampah" required>
+            <select id="jenis" name="jenis" required>
+                <option value="" disabled selected>Pilih jenis sampah</option>
+                <option value="Organik">Organik</option>
+                <option value="Anorganik">Anorganik</option>
+            </select>
+            <button type="submit">Oke</button>
+        </form>
+    </section>
+    <section class="riwayat-section">
+        <h2>Riwayat</h2>
+        <ul id="listPelanggan"></ul>
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <h3>Detail Transaksi</h3>
+                <div id="popupDetail"></div>
+                <button class="hapus-btn" id="hapusBtn">Hapus</button>
+                <button class="tutup-btn" id="tutupBtn">Tutup</button>
+            </div>
+        </div>
+    </section>
+    <div>
+    </div>
+</body>
+
+</html>
